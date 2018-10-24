@@ -17,7 +17,7 @@ def call(lvVersion, diffingPicRepo) {
             }
 
             timeout(time: 5, unit: 'MINUTES') {
-                cloneBuildTools()
+                cloneDcafBuildTools()
             }
         }
         // If this change is a pull request, diff vis.
