@@ -15,6 +15,10 @@ def call(lvVersion, diffingPicRepo) {
             timeout(time: 5, unit: 'MINUTES') {
                 checkout scm
             }
+
+            timeout(time: 5, unit: 'MINUTES') {
+                cloneBuildTools()
+            }
         }
         // If this change is a pull request, diff vis.
         if (env.CHANGE_ID) {
