@@ -14,5 +14,5 @@
 @GOTO :END
 
 :DIFF_VI
-    labview-cli --kill --lv-ver %lv_version% L:\lvDiff.vi -- "%vi1%" "%vi2%" "%working_dir%"
+    labview-cli --kill --lv-ver %lv_version% buildsystem\steps\lvDiff.vi -- "%vi1%" "%vi2%" "%working_dir%"
 :END
