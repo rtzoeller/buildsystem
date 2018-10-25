@@ -1,8 +1,8 @@
 def call() {
-    echo 'Cloning hard-coded build tools to workspace.'
+    echo 'Cloning build tools to workspace.'
 
     def organization = getComponentParts()['organization']
     def branch = env."library.dcaf-build-tools.version"
-    buildToolsDir = cloneRepo("https://github.com/rtzoeller/buildsystem", branch)
+    buildToolsDir = cloneRepo("https://github.com/$organization/buildsystem", branch)
     return buildToolsDir
 }
