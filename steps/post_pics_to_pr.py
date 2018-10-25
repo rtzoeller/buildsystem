@@ -51,8 +51,6 @@ Notice something funny? Help fix me on [my GitHub repo.](https://github.com/LabV
     org, repo, _ = pullRequestInfo.split('/')
     url = "https://api.github.com/repos/%s/%s/issues/%s/comments" % (org, repo, prNumber)
     data = json.dumps({"body":body})
-    print("Url:", url)
-    print("Data:", data)
     r = requests.post(url, data=data, headers=header)
     if (r.ok):
         _moduleLogger.info('Response code: %s', r.status_code)
